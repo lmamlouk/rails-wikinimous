@@ -1,0 +1,15 @@
+<h1>MY ARTICLES </h1>
+<div style="background-color: #f7f7f7">
+  <p><%= link_to 'create a new article', new_article_path(@article) %></p>
+</div>
+<ul>
+  <% @articles.each do |article|  %>
+
+    <li><h3 style="color:blue">  <%= link_to article.title, article_path(article) %></h3></li>
+    <li> <%= article.content %></li>
+  <% end %>
+
+</ul>
+
+
+
